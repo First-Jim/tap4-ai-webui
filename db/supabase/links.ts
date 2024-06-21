@@ -5,3 +5,5 @@ export const getLinks = async () => {
   const { data, error } = await supabase.from('submit').select('*');
   return { data, error };
 };
+
+export const addLinks = async () => {};

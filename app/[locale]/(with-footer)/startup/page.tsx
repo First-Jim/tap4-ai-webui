@@ -1,4 +1,7 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
+import { getLinks } from '@/db/supabase/links';
 import { useTranslations } from 'next-intl';
 
 import { formatTime } from '@/lib/utils/timeUtils';
@@ -10,6 +13,10 @@ import MobileTable from './MobileTable';
 export default function Page() {
   const t = useTranslations('Startup');
 
+  useEffect(() => {
+    const links = getLinks();
+    console.log('links: ', links);
+  }, []);
   return (
     <div className='flex flex-col'>
       <div className='my-5 flex flex-col text-center lg:mx-auto lg:my-10 lg:gap-1'>

@@ -100,6 +100,74 @@ export default function SubmitForm({ className }: { className?: string }) {
               </FormItem>
             )}
           />
+          <FormField
+            control={form.control}
+            name='url'
+            render={({ field }) => (
+              <FormItem className='space-y-1'>
+                <FormLabel>{t('url')}</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder={FORM_PLACEHOLDER}
+                    className='input-border-pink h-[42px] w-full rounded-[8px] border-[0.5px] bg-dark-bg p-5'
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name='url'
+            render={({ field }) => (
+              <FormItem className='space-y-1'>
+                <FormLabel>{t('url')}</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder={FORM_PLACEHOLDER}
+                    className='input-border-pink h-[42px] w-full rounded-[8px] border-[0.5px] bg-dark-bg p-5'
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name='url'
+            render={({ field }) => (
+              <FormItem className='space-y-1'>
+                <FormLabel>{t('url')}</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder={FORM_PLACEHOLDER}
+                    className='input-border-pink h-[42px] w-full rounded-[8px] border-[0.5px] bg-dark-bg p-5'
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name='email'
+            render={({ field }) => (
+              <FormItem className='space-y-1'>
+                <FormLabel>{t('url')}</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder={FORM_PLACEHOLDER}
+                    className='input-border-pink h-[42px] w-full rounded-[8px] border-[0.5px] bg-dark-bg p-5'
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
         </div>
         <div className='flex flex-col gap-[10px] lg:gap-8'>
           <button

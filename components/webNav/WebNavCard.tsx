@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { DotsVerticalIcon } from '@radix-ui/react-icons';
 import { SquareArrowOutUpRight } from 'lucide-react';
 
 import { WebNavigationListRow } from '@/lib/data';
@@ -6,8 +9,15 @@ import { WebNavigationListRow } from '@/lib/data';
 import BaseImage from '../image/BaseImage';
 
 export default function WebNavCard({ name, thumbnailUrl, title, url, content }: WebNavigationListRow) {
+  const handlerEditCard = () => {
+    console.log('edit card', name);
+    // TODO modal
+  };
   return (
-    <div className='flex flex-col gap-3 rounded-[12px] bg-[#2C2D36] p-2 lg:p-5'>
+    <div className='hover group relative flex flex-col gap-3 rounded-[12px] bg-[#2C2D36] p-2 lg:p-5'>
+      <div className='more-actions absolute right-2 top-1  hidden group-hover:flex' onClick={handlerEditCard}>
+        <DotsVerticalIcon className='size-5 cursor-pointer' />
+      </div>
       <Link href={`/ai/${name}`} title={title}>
         <BaseImage
           width={278}
